@@ -1,6 +1,4 @@
 #include <stdio.h>
-
-
 int factorial(int n) {
     int fact = 1;
     for (int i = 1; i <= n; i++) {
@@ -11,23 +9,15 @@ int factorial(int n) {
 
 int main() {
     int num, originalNum, remainder, sum = 0;
-
-    
     printf("Enter an integer: ");
     scanf("%d", &num);
-
-    
     originalNum = num;
-
-    
     while (originalNum != 0) {
         remainder = originalNum % 10; 
         sum += factorial(remainder); 
         originalNum /= 10;           
     }
-
-   
-    if (sum == num) {
+   if (sum == num) {
         printf("%d is a Strong number.\n", num);
     } else {
         printf("%d is not a Strong number.\n", num);
